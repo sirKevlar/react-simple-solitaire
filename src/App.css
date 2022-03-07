@@ -1,3 +1,105 @@
 .App {
   text-align: center;
+  background-color: antiquewhite;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.table {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% auto;
+  grid-template-areas:
+    'pile . spades clubs hearts diamonds'
+    'stack . in-hand in-hand in-hand in-hand'
+    'info . one two three four';
+  color: antiquewhite;
+}
+
+.card-space {
+  height: 150px;
+  width: 105px;
+  background-image: url('./assets/cardBackRed.png');
+  background-size: cover;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.green {
+  background-color: green;
+}
+
+.brown {
+  background-color: rgb(95, 65, 65);
+}
+
+.center,
+.center-top {
+  display: grid;
+  justify-items: center;
+}
+
+.center {
+  align-items: center;
+}
+
+.center-top {
+  padding-top: 20px;
+}
+
+.shuffle {
+  height: 30px;
+}
+
+.pile,
+.info,
+.stack,
+.home,
+.dump,
+.in-hand {
+  border: 2px solid rgb(117, 78, 143);
+}
+
+.spades {
+  grid-area: spades;
+}
+.clubs {
+  grid-area: clubs;
+}
+.hearts {
+  grid-area: hearts;
+}
+.diamonds {
+  grid-area: diamonds;
+}
+.info {
+  grid-area: info;
+}
+.in-hand {
+  grid-area: in-hand;
+}
+.stack {
+  grid-area: stack;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.pile {
+  grid-area: pile;
 }

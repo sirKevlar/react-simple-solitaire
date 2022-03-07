@@ -1,6 +1,6 @@
 import shuffle from '../api/shuffle';
 
-export default function Info({ currentDeck, setCurrentDeck }) {
+export default function Info({ currentDeck, setCurrentDeck, setStack }) {
   return (
     <div className='brown info center-top'>
       <h2>info</h2>
@@ -10,8 +10,8 @@ export default function Info({ currentDeck, setCurrentDeck }) {
         onClick={() => {
           shuffle(currentDeck.deck_id)
             .then((shuffledDeck) => {
-              console.log(shuffledDeck);
               setCurrentDeck(shuffledDeck);
+              setStack([]);
             })
             .catch(console.log);
         }}

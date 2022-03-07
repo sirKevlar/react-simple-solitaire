@@ -22,14 +22,18 @@
 }
 
 .card-space {
-  height: 150px;
-  width: 105px;
   background-image: url('./assets/cardBackRed.png');
   background-size: cover;
-  border-radius: 5px;
   color: black;
   font-size: 1.3em;
   font-weight: 900;
+}
+
+img,
+.card-space {
+  border-radius: 5px;
+  height: 150px;
+  width: 105px;
 }
 
 .green {

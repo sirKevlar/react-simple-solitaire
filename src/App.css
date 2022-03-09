@@ -25,6 +25,96 @@
   background-image: url('./assets/cardBackRed.png');
   background-size: cover;
   color: black;
+  position: relative;
+}
+
+.hand-spread {
+  justify-self: baseline;
+  margin-left: 30px;
+  display: flex;
+}
+
+.child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.child-1 {
+  top: 25px;
+}
+.child-2 {
+  top: 50px;
+}
+.child-3 {
+  top: 75px;
+}
+.child-4 {
+  top: 100px;
+}
+.child-5 {
+  top: 125px;
+}
+.child-6 {
+  top: 150px;
+}
+.child-7 {
+  top: 175px;
+}
+.child-8 {
+  top: 200px;
+}
+.child-9 {
+  top: 225px;
+}
+.child-10 {
+  top: 250px;
+}
+.child-11 {
+  top: 275px;
+}
+.child-12 {
+  top: 300px;
+}
+
+.horizontal-child-1 {
+  left: 15px;
+}
+.horizontal-child-2 {
+  left: 30px;
+}
+.horizontal-child-3 {
+  left: 45px;
+}
+.horizontal-child-4 {
+  left: 60px;
+}
+.horizontal-child-5 {
+  left: 75px;
+}
+.horizontal-child-6 {
+  left: 90px;
+}
+.horizontal-child-7 {
+  left: 105px;
+}
+.horizontal-child-8 {
+  left: 120px;
+}
+.horizontal-child-9 {
+  left: 135px;
+}
+.horizontal-child-10 {
+  left: 150px;
+}
+.horizontal-child-11 {
+  left: 165px;
+}
+.horizontal-child-12 {
+  left: 180px;
+}
+.horizontal-child-13 {
+  left: 195px;
 }
 
 h2 {

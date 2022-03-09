@@ -46,10 +46,34 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
         {dump[className] === 0 ? (
           <h2>Dump {className}</h2>
         ) : (
-          <img
-            src={dump[secondLetter][dump[className] - 1][0].cards[0].image}
-            alt='card'
-          />
+          dump[secondLetter].map((card, i) => {
+            return (
+              <img
+                className={`child child-${i}`}
+                key={card[0].cards[0].code}
+                src={card[0].cards[0].image}
+                alt='card'
+                onClick={(e) => {
+                  if (inHand.length === 0) {
+                    const newInHand = dump[secondLetter].slice(
+                      +e.target.className.slice(-1)
+                    );
+                    const newFlatHand = newInHand.flat();
+                    console.log(newInHand);
+                    console.log(newFlatHand);
+                    setInHand(newFlatHand);
+                    const newDump = { ...dump };
+                    newDump[secondLetter] = dump[secondLetter].slice(
+                      0,
+                      +e.target.className.slice(-1)
+                    );
+                    newDump[className] = newDump[className] - newInHand.length;
+                    setDump(newDump);
+                  }
+                }}
+              />
+            );
+          })
         )}
       </div>
     </div>

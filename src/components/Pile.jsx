@@ -18,7 +18,7 @@ export default function Pile({ stack, setStack, currentDeck, setCurrentDeck }) {
               .catch(console.log);
         }}
       >
-        Pile
+        <h2>Pile</h2>
       </div>
     </div>
   );

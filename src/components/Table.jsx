@@ -14,6 +14,17 @@ export default function Table() {
     shuffled: true,
   });
   const [stack, setStack] = useState([]);
+  const [inHand, setInHand] = useState([]);
+  const [home, setHome] = useState({
+    spades: 0,
+    s: [null],
+    clubs: 0,
+    c: [null],
+    hearts: 0,
+    h: [null],
+    diamonds: 0,
+    d: [null],
+  });
 
   return (
     <section className='table'>
@@ -23,17 +34,48 @@ export default function Table() {
         currentDeck={currentDeck}
         setCurrentDeck={setCurrentDeck}
       />
-      <Home className='spades' />
-      <Home className='clubs' />
-      <Home className='hearts' />
-      <Home className='diamonds' />
+      <Home
+        className='spades'
+        home={home}
+        setHome={setHome}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Home
+        className='clubs'
+        home={home}
+        setHome={setHome}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Home
+        className='hearts'
+        home={home}
+        setHome={setHome}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Home
+        className='diamonds'
+        home={home}
+        setHome={setHome}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
       <Info
         currentDeck={currentDeck}
         setCurrentDeck={setCurrentDeck}
         setStack={setStack}
+        setInHand={setInHand}
+        setHome={setHome}
       />
-      <InHand />
-      <Stack stack={stack} />
+      <InHand inHand={inHand} />
+      <Stack
+        stack={stack}
+        setStack={setStack}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
       <Dump className='one' />
       <Dump className='two' />
       <Dump className='three' />

@@ -25,8 +25,12 @@
   background-image: url('./assets/cardBackRed.png');
   background-size: cover;
   color: black;
-  font-size: 1.3em;
+}
+
+h2 {
+  font-size: 1.1em;
   font-weight: 900;
+  background-color: rgba(250, 235, 215, 0.644);
 }
 
 img,

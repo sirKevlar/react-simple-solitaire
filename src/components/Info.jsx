@@ -1,10 +1,16 @@
 import shuffle from '../api/shuffle';
 
-export default function Info({ currentDeck, setCurrentDeck, setStack, setInHand, setHome }) {
+export default function Info({
+  currentDeck,
+  setCurrentDeck,
+  setStack,
+  setInHand,
+  setHome,
+  setDump,
+}) {
   return (
     <div className='brown info center-top'>
-      <h3>info</h3>
-      <h3>cards left: {currentDeck.remaining}</h3>
+      <h3>cards on pile: {currentDeck.remaining}</h3>
       <button
         className='shuffle'
         onClick={() => {
@@ -12,17 +18,27 @@ export default function Info({ currentDeck, setCurrentDeck, setStack, setInHand,
             .then((shuffledDeck) => {
               setCurrentDeck(shuffledDeck);
               setStack([]);
-              setInHand([])
+              setInHand([]);
               setHome({
                 spades: 0,
-                s: [null],
+                s: [],
                 clubs: 0,
-                c: [null],
+                c: [],
                 hearts: 0,
-                h: [null],
+                h: [],
                 diamonds: 0,
-                d: [null],
-              })
+                d: [],
+              });
+              setDump({
+                one: 0,
+                n: [],
+                two: 0,
+                w: [],
+                three: 0,
+                h: [],
+                four: 0,
+                o: [],
+              });
             })
             .catch(console.log);
         }}

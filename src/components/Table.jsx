@@ -17,13 +17,23 @@ export default function Table() {
   const [inHand, setInHand] = useState([]);
   const [home, setHome] = useState({
     spades: 0,
-    s: [null],
+    s: [],
     clubs: 0,
-    c: [null],
+    c: [],
     hearts: 0,
-    h: [null],
+    h: [],
     diamonds: 0,
-    d: [null],
+    d: [],
+  });
+  const [dump, setDump] = useState({
+    one: 0,
+    n: [],
+    two: 0,
+    w: [],
+    three: 0,
+    h: [],
+    four: 0,
+    o: [],
   });
 
   return (
@@ -68,6 +78,7 @@ export default function Table() {
         setStack={setStack}
         setInHand={setInHand}
         setHome={setHome}
+        setDump={setDump}
       />
       <InHand inHand={inHand} />
       <Stack
@@ -76,10 +87,34 @@ export default function Table() {
         inHand={inHand}
         setInHand={setInHand}
       />
-      <Dump className='one' />
-      <Dump className='two' />
-      <Dump className='three' />
-      <Dump className='four' />
+      <Dump
+        className='one'
+        dump={dump}
+        setDump={setDump}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Dump
+        className='two'
+        dump={dump}
+        setDump={setDump}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Dump
+        className='three'
+        dump={dump}
+        setDump={setDump}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
+      <Dump
+        className='four'
+        dump={dump}
+        setDump={setDump}
+        inHand={inHand}
+        setInHand={setInHand}
+      />
     </section>
   );
 }

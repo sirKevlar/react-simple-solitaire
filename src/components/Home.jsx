@@ -39,7 +39,7 @@ export default function Home({ className, home, setHome, inHand, setInHand }) {
           <h2>Home {className}</h2>
         ) : (
           <img
-            src={home[firstLetter][home[className]][0].cards[0].image}
+            src={home[firstLetter][home[className] - 1][0].cards[0].image}
             alt='card'
           />
         )}
@@ -48,6 +48,7 @@ export default function Home({ className, home, setHome, inHand, setInHand }) {
   );
 }
 
+// EXAMPLE OF HOME INITIAL STATE
 /*{
   spades: 0,
   s: [null],

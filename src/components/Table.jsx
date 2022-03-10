@@ -35,6 +35,7 @@ export default function Table() {
     four: 0,
     o: [],
   });
+  const [hasWon, setHasWon] = useState(false)
 
   return (
     <section className='table'>
@@ -50,6 +51,7 @@ export default function Table() {
         setHome={setHome}
         inHand={inHand}
         setInHand={setInHand}
+        setHasWon={setHasWon}
       />
       <Home
         className='clubs'
@@ -57,6 +59,7 @@ export default function Table() {
         setHome={setHome}
         inHand={inHand}
         setInHand={setInHand}
+        setHasWon={setHasWon}
       />
       <Home
         className='hearts'
@@ -64,6 +67,7 @@ export default function Table() {
         setHome={setHome}
         inHand={inHand}
         setInHand={setInHand}
+        setHasWon={setHasWon}
       />
       <Home
         className='diamonds'
@@ -71,6 +75,7 @@ export default function Table() {
         setHome={setHome}
         inHand={inHand}
         setInHand={setInHand}
+        setHasWon={setHasWon}
       />
       <Info
         currentDeck={currentDeck}
@@ -79,8 +84,9 @@ export default function Table() {
         setInHand={setInHand}
         setHome={setHome}
         setDump={setDump}
+        setHasWon={setHasWon}
       />
-      <InHand inHand={inHand} />
+      <InHand inHand={inHand} hasWon={hasWon}/>
       <Stack
         stack={stack}
         setStack={setStack}

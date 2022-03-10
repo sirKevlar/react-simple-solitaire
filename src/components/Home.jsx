@@ -1,4 +1,4 @@
-export default function Home({ className, home, setHome, inHand, setInHand }) {
+export default function Home({ className, home, setHome, inHand, setInHand, setHasWon }) {
   const capsFirstLetter = className[0].toUpperCase();
   const firstLetter = className[0];
   const cardRef = {
@@ -32,6 +32,9 @@ export default function Home({ className, home, setHome, inHand, setInHand }) {
             newHome[className]++;
             setInHand([]);
             setHome(newHome);
+            if (home.s.length + home.c.length + home.h.length + home.d.length === 51) {
+              setHasWon(true)
+            }
           }
         }}
       >

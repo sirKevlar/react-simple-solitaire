@@ -23,21 +23,25 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
         onClick={() => {
           if (inHand.length > 0 && dump[className] === 0) {
             const newDump = { ...dump };
-            newDump[secondLetter].push(inHand);
-            newDump[className]++;
+            for (let i = 0; i < inHand.length; i++) {
+              newDump[secondLetter].push(inHand[i]);
+            }
+            newDump[className] += inHand.length;
             setInHand([]);
             setDump(newDump);
           } else if (
             inHand.length > 0 &&
             cardRef[inHand[0].cards[0].code[0]] ===
               cardRef[
-                dump[secondLetter][dump[className] - 1][0].cards[0].code[0]
+                dump[secondLetter][dump[className] - 1].cards[0].code[0]
               ] -
                 1
           ) {
             const newDump = { ...dump };
-            newDump[secondLetter].push(inHand);
-            newDump[className]++;
+            for (let i = 0; i < inHand.length; i++) {
+              newDump[secondLetter].push(inHand[i]);
+            }
+            newDump[className] += inHand.length;
             setInHand([]);
             setDump(newDump);
           }
@@ -50,18 +54,16 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
             return (
               <img
                 className={`child child-${i}`}
-                key={card[0].cards[0].code}
-                src={card[0].cards[0].image}
+                key={card.cards[0].code}
+                src={card.cards[0].image}
                 alt='card'
                 onClick={(e) => {
                   if (inHand.length === 0) {
                     const newInHand = dump[secondLetter].slice(
                       +e.target.className.slice(-1)
                     );
-                    const newFlatHand = newInHand.flat();
-                    console.log(newInHand);
-                    console.log(newFlatHand);
-                    setInHand(newFlatHand);
+                    // const newFlatHand = newInHand.flat();
+                    setInHand(newInHand);
                     const newDump = { ...dump };
                     newDump[secondLetter] = dump[secondLetter].slice(
                       0,

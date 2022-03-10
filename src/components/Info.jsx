@@ -7,6 +7,7 @@ export default function Info({
   setInHand,
   setHome,
   setDump,
+  setHasWon,
 }) {
   return (
     <div className='brown info center-top'>
@@ -39,6 +40,7 @@ export default function Info({
                 four: 0,
                 o: [],
               });
+              setHasWon(false);
             })
             .catch(console.log);
         }}

@@ -12,6 +12,7 @@ export default function Info({
   return (
     <div className='brown info center-top'>
       <h3>cards on pile: {currentDeck.remaining}</h3>
+      <p id="rules">Rules: <br/><br/>Cards in home score 1pt<br/><br/>Fill home with suited cards A-K<br/><br/>Any card on empty dump<br/><br/>Subsequent dump cards unsuited K-A</p>
       <button
         className='shuffle'
         onClick={() => {

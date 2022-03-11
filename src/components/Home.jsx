@@ -1,4 +1,11 @@
-export default function Home({ className, home, setHome, inHand, setInHand, setHasWon }) {
+export default function Home({
+  className,
+  home,
+  setHome,
+  inHand,
+  setInHand,
+  setHasWon,
+}) {
   const capsFirstLetter = className[0].toUpperCase();
   const firstLetter = className[0];
   const cardRef = {
@@ -32,8 +39,11 @@ export default function Home({ className, home, setHome, inHand, setInHand, setH
             newHome[className]++;
             setInHand([]);
             setHome(newHome);
-            if (home.s.length + home.c.length + home.h.length + home.d.length === 51) {
-              setHasWon(true)
+            if (
+              home.s.length + home.c.length + home.h.length + home.d.length ===
+              51
+            ) {
+              setHasWon(true);
             }
           }
         }}
@@ -54,11 +64,11 @@ export default function Home({ className, home, setHome, inHand, setInHand, setH
 // EXAMPLE OF HOME INITIAL STATE
 /*{
   spades: 0,
-  s: [null],
+  s: [],
   clubs: 0,
-  c: [null],
+  c: [],
   hearts: 0,
-  h: [null],
+  h: [],
   diamonds: 0,
-  d: [null],
+  d: [],
 }*/

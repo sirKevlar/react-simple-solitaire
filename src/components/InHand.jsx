@@ -1,4 +1,4 @@
-export default function InHand({ inHand, hasWon }) {
+export default function InHand({ inHand, hasWon, home }) {
   return (
     <div className='green in-hand center'>
       <div className='card-space hand-spread'>
@@ -11,6 +11,7 @@ export default function InHand({ inHand, hasWon }) {
         )}
       </div>
       {hasWon && <h2>AN HONOURABLE VICTORY</h2>}
+      <h1 id="score">Score: {home.s.length + home.c.length + home.h.length + home.d.length}</h1>
     </div>
   );
 }

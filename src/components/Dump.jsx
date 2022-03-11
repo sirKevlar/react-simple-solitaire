@@ -21,6 +21,7 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
       <div
         className='card-space'
         onClick={() => {
+          //CARDS IN HAND - DUMP EMPTY
           if (inHand.length > 0 && dump[className] === 0) {
             const newDump = { ...dump };
             for (let i = 0; i < inHand.length; i++) {
@@ -30,6 +31,7 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
             setInHand([]);
             setDump(newDump);
           } else if (
+            //CARDS IN HAND - VALID PLACING IN POPULATED DUMP
             inHand.length > 0 &&
             cardRef[inHand[0].cards[0].code[0]] ===
               cardRef[
@@ -57,17 +59,18 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
                 key={card.cards[0].code}
                 src={card.cards[0].image}
                 alt='card'
+                // CLICK ON INDIVIDUAL CARDS - PLACE IN HAND
                 onClick={(e) => {
+                  const cardId = e.target.className.match(/\d+/);
                   if (inHand.length === 0) {
                     const newInHand = dump[secondLetter].slice(
-                      +e.target.className.slice(-1)
+                      +cardId //+e.target.className REMOVED .slice(-1)
                     );
-                    // const newFlatHand = newInHand.flat();
                     setInHand(newInHand);
                     const newDump = { ...dump };
                     newDump[secondLetter] = dump[secondLetter].slice(
                       0,
-                      +e.target.className.slice(-1)
+                      +cardId //+e.target.className REMOVED .slice(-1)
                     );
                     newDump[className] = newDump[className] - newInHand.length;
                     setDump(newDump);
@@ -85,11 +88,11 @@ export default function Dump({ className, dump, setDump, inHand, setInHand }) {
 // EXAMPLE OF DUMP INITIAL STATE
 /*{
     one: 0,
-    n: [null],
+    n: [],
     two: 0,
-    w: [null],
+    w: [],
     three: 0,
-    h: [null],
+    h: [],
     four: 0,
-    o: [null],
+    o: [],
   } */

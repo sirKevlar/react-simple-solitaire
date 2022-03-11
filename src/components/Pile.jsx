@@ -23,3 +23,19 @@ export default function Pile({ stack, setStack, currentDeck, setCurrentDeck }) {
     </div>
   );
 }
+
+/* ---EXAMPLE RESPONSE FOR DRAW SINGLE CARD---
+
+ {
+   "success": true,
+   "cards": [
+       {
+           "image": "https://deckofcardsapi.com/static/img/KH.png",
+           "value": "KING",
+           "suit": "HEARTS",
+           "code": "KH"
+       }
+   ],
+   "deck_id":"3p40paa87x90",
+   "remaining": 51
+ } */

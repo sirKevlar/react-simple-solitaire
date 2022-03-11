@@ -27,18 +27,12 @@
   color: black;
   position: relative;
 }
-
-.hand-spread {
-  justify-self: baseline;
-  margin-left: 7%;
-}
-
+/* MANAGE VERTICAL CASCADING CARDS */
 .child {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .child-1 {
   top: 25px;
 }
@@ -75,7 +69,11 @@
 .child-12 {
   top: 300px;
 }
-
+/* MANAGE HORIZONTAL CASCADING CARDS */
+.hand-spread {
+  justify-self: baseline;
+  margin-left: 7%;
+}
 .horizontal-child-1 {
   left: 15px;
 }
@@ -129,6 +127,11 @@ img,
   width: 105px;
 }
 
+#score {
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: 2em;
+}
+
 .green {
   background-color: green;
 }
@@ -153,6 +156,10 @@ img,
 
 .shuffle {
   height: 30px;
+  background-color: green;
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
 }
 
 .pile,
@@ -177,10 +184,20 @@ img,
   grid-area: diamonds;
 }
 .info {
+  font-family: 'Courier New', Courier, monospace;
   grid-area: info;
+  font-size: 0.9em;
+}
+#rules {
+  text-align: left;
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: 900;
 }
 .in-hand {
   grid-area: in-hand;
+  display: flex;
+  justify-content: space-between;
 }
 .stack {
   grid-area: stack;

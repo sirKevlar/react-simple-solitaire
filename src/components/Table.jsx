@@ -86,7 +86,7 @@ export default function Table() {
         setDump={setDump}
         setHasWon={setHasWon}
       />
-      <InHand inHand={inHand} hasWon={hasWon}/>
+      <InHand inHand={inHand} hasWon={hasWon} home={home}/>
       <Stack
         stack={stack}
         setStack={setStack}

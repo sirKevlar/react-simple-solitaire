@@ -8,6 +8,54 @@
   justify-items: center;
 }
 
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/suits.avif');
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-contents {
+  width: 50%;
+  height: 50%;
+  justify-content: space-around;
+}
+
+form,
+.login,
+.login-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 900;
+}
+
+form,
+.login-contents,
+#login-title {
+  border-radius: 7px;
+}
+
+form,
+#login-title {
+  width: 70%;
+  padding: 0.5em 0;
+}
+
+form {
+  height: 30%;
+  justify-content: space-evenly;
+}
+
+.red-bg {
+  background-color: rgba(255, 0, 0, 0.384);
+}
+
+.green-bg {
+  background-color: rgba(0, 128, 0, 0.384);
+}
+
 .table {
   width: 90%;
   height: 90%;
@@ -117,6 +165,9 @@
 h2 {
   font-size: 1.1em;
   font-weight: 900;
+}
+h2,
+form {
   background-color: rgba(250, 235, 215, 0.644);
 }
 
@@ -154,7 +205,8 @@ img,
   padding-top: 20px;
 }
 
-.shuffle {
+.shuffle,
+.login-button {
   height: 30px;
   background-color: green;
   color: aliceblue;

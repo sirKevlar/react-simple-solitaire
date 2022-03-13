@@ -8,6 +8,7 @@ export default function Info({
   setHome,
   setDump,
   setHasWon,
+  currentUser
 }) {
   return (
     <div className='brown info center-top'>
@@ -16,7 +17,7 @@ export default function Info({
       <button
         className='shuffle'
         onClick={() => {
-          shuffle(currentDeck.deck_id)
+          shuffle(currentUser)
             .then((shuffledDeck) => {
               setCurrentDeck(shuffledDeck);
               setStack([]);

@@ -6,7 +6,7 @@ import InHand from './InHand';
 import Pile from './Pile';
 import Stack from './Stack';
 
-export default function Table() {
+export default function Table({ currentUser }) {
   const [currentDeck, setCurrentDeck] = useState({
     success: true,
     deck_id: 'sg4f04ohy1bz',
@@ -35,7 +35,7 @@ export default function Table() {
     four: 0,
     o: [],
   });
-  const [hasWon, setHasWon] = useState(false)
+  const [hasWon, setHasWon] = useState(false);
 
   return (
     <section className='table'>
@@ -85,8 +85,14 @@ export default function Table() {
         setHome={setHome}
         setDump={setDump}
         setHasWon={setHasWon}
+        currentUser={currentUser}
       />
-      <InHand inHand={inHand} hasWon={hasWon} home={home}/>
+      <InHand
+        inHand={inHand}
+        hasWon={hasWon}
+        home={home}
+        currentUser={currentUser}
+      />
       <Stack
         stack={stack}
         setStack={setStack}

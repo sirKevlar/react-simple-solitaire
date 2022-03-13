@@ -1,6 +1,7 @@
 import drawCard from '../api/drawCard';
 
 export default function Pile({ stack, setStack, currentDeck, setCurrentDeck }) {
+
   return (
     <div className='brown pile container center'>
       <div

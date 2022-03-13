@@ -63,7 +63,7 @@ form {
   grid-template-columns: 1fr 0.2fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 25% 25% auto;
   grid-template-areas:
-    'pile . spades clubs hearts diamonds'
+    'pile . spades hearts diamonds clubs'
     'stack . in-hand in-hand in-hand in-hand'
     'info . one two three four';
   color: antiquewhite;

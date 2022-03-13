@@ -41,7 +41,7 @@ export default function Home({
             setHome(newHome);
             if (
               home.s.length + home.c.length + home.h.length + home.d.length ===
-              51
+              52
             ) {
               setHasWon(true);
             }

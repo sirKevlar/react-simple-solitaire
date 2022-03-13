@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import shuffle from '../api/shuffle';
 
 export default function Info({
@@ -8,12 +9,33 @@ export default function Info({
   setHome,
   setDump,
   setHasWon,
-  currentUser
+  currentUser,
 }) {
+  useEffect(() => {
+    shuffle(currentUser)
+      .then((shuffledDeck) => {
+        setCurrentDeck(shuffledDeck);
+      })
+      .catch(console.log);
+  }, [currentUser]);
+
   return (
     <div className='brown info center-top'>
       <h3>cards on pile: {currentDeck.remaining}</h3>
-      <p id="rules">Rules: <br/><br/>Cards in home score 1pt<br/><br/>Fill home with suited cards A-K<br/><br/>Any card on empty dump<br/><br/>Subsequent dump cards unsuited K-A</p>
+      <p id='rules'>
+        Rules: <br />
+        <br />
+        Cards in home score 1pt
+        <br />
+        <br />
+        Fill home with suited cards A-K
+        <br />
+        <br />
+        Any card on empty dump
+        <br />
+        <br />
+        Subsequent dump cards unsuited K-A
+      </p>
       <button
         className='shuffle'
         onClick={() => {
@@ -47,7 +69,7 @@ export default function Info({
             .catch(console.log);
         }}
       >
-        shuffle deck
+        Restart
       </button>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import shuffle from '../api/shuffle';
 
 export default function Info({
@@ -11,6 +11,8 @@ export default function Info({
   setHasWon,
   currentUser,
 }) {
+  const [isRules, setIsRules] = useState(true);
+
   useEffect(() => {
     shuffle(currentUser)
       .then((shuffledDeck) => {
@@ -22,20 +24,42 @@ export default function Info({
   return (
     <div className='brown info center-top'>
       <h3>cards on pile: {currentDeck.remaining}</h3>
-      <p id='rules'>
-        Rules: <br />
-        <br />
-        Cards in home score 1pt
-        <br />
-        <br />
-        Fill home with suited cards A-K
-        <br />
-        <br />
-        Any card on empty dump
-        <br />
-        <br />
-        Subsequent dump cards unsuited K-A
-      </p>
+      {isRules ? (
+        <p id='rules'>
+          Rules: <br />
+          <br />
+          Cards in home score 1pt
+          <br />
+          <br />
+          Fill home with suited cards A-K
+          <br />
+          <br />
+          Any card on empty dump/stack
+          <br />
+          <br />
+          Subsequent dump cards unsuited K-A
+        </p>
+      ) : (
+        <p id='rules'>
+          Instructions: <br />
+          <br />
+          Click on pile draws card
+          <br />
+          <br />
+          No card in hand: click stack or dump puts card/s in hand
+          <br />
+          <br />
+          Card/s in hand: click on valid space transfers card/s
+        </p>
+      )}
+      <button
+        className='shuffle'
+        onClick={() => {
+          setIsRules(!isRules);
+        }}
+      >
+        {isRules ? 'Instructions' : 'Rules'}
+      </button>
       <button
         className='shuffle'
         onClick={() => {

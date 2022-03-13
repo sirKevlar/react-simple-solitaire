@@ -70,10 +70,17 @@ form {
 }
 
 .card-space {
-  background-image: url('./assets/cardBackRed.png');
+  width: 100px;
+  height: 150px;
   background-size: cover;
   color: black;
   position: relative;
+  background-color: rgba(240, 248, 255, 0.247);
+}
+
+.card-space-pile {
+  background-size: cover;
+  background-image: url('./assets/cardBackRed.png');
 }
 /* MANAGE VERTICAL CASCADING CARDS */
 .child {
@@ -207,11 +214,15 @@ img,
 
 .shuffle,
 .login-button {
-  height: 30px;
+  height: 24px;
   background-color: green;
   color: aliceblue;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 900;
+}
+
+.shuffle {
+  width: 90%;
 }
 
 .pile,

@@ -5,7 +5,7 @@ export default function Pile({ stack, setStack, currentDeck, setCurrentDeck }) {
   return (
     <div className='brown pile container center'>
       <div
-        className='card-space'
+        className='card-space card-space-pile'
         onClick={() => {
           if (currentDeck.remaining > 0)
             drawCard(currentDeck.deck_id)

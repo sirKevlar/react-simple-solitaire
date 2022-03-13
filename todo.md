@@ -1,8 +1,8 @@
 # Beta refinement requests
 
-- card in hand back to stack
+- [x] card in hand back to stack
 
-- show piles empty not card backs
+- [x] show piles empty not card backs
 
 - [x] shuffle deck should read restart
 
@@ -14,4 +14,4 @@
 
 - [x] Should shuffle onMount
 
-- instructions
+- [x] instructions

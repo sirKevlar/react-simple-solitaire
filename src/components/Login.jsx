@@ -12,6 +12,8 @@ export default function Login({ setCurrentUser }) {
     'r2byM0r3l',
     'alysMJ',
     'islaPJ',
+    'kyl3H2gg1ns',
+    'v1s1tor0n3',
   ];
 
   return (

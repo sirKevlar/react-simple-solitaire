@@ -9,6 +9,8 @@ const userDecks = {
   r2byM0r3l: 'aguqr2tb6f5c',
   alysMJ: 'vu362u3djvjq',
   islaPJ: 'ucgrolwt66ts',
+  kyl3H2gg1ns: '1k8e6zv5rw1y',
+  v1s1tor0n3: 'pgod3lvzzj2o'
 };
 
 export default function shuffle(user) {
@@ -16,5 +18,5 @@ export default function shuffle(user) {
     .get(`https://deckofcardsapi.com/api/deck/${userDecks[user]}/shuffle`)
     .then(({ data }) => {
       return data;
-    })
+    });
 }

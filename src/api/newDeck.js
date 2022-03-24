@@ -12,4 +12,4 @@ function newDeck() {
     });
 }
 
-// newDeck();
+newDeck();

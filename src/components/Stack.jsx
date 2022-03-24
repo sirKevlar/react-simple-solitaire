@@ -17,7 +17,7 @@ export default function Stack({ stack, setStack, inHand, setInHand }) {
         }}
       >
         {stack.length > 0 ? (
-          <img src={stack[0].cards[0].image} alt='card' />
+          <img src={stack[0].cards[0].image} alt="card" />
         ) : (
           <h2>Stack</h2>
         )}

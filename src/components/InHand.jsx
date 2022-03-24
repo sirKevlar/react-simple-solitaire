@@ -8,6 +8,8 @@ export default function InHand({ inHand, hasWon, home, currentUser }) {
     r2byM0r3l: 'Ruby Morel',
     alysMJ: 'Alys Morel-Jones',
     islaPJ: 'Isla Preston-Jones',
+    kyl3H2gg1ns: 'Kyle Huggins',
+    v1s1tor0n3: 'Guest Player'
   };
 
   return (

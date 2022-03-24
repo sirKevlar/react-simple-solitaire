@@ -20,4 +20,6 @@
 
 - change favicon
 
-- add drag and drop to web view
+- add drag and drop to web view (pairingGenerator)
+
+- navigator.platform to assess device

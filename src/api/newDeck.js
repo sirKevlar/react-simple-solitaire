@@ -1,10 +1,10 @@
-// Generate new card id using axios
+// Generate new deck id using axios
 
 // import axios from 'axios';
 const axios = require('axios');
 
 // export default
-function newCard() {
+function newDeck() {
   return axios
     .get(`https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`)
     .then(({ data }) => {
@@ -12,4 +12,4 @@ function newCard() {
     });
 }
 
-// newCard();
+// newDeck();
